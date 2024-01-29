@@ -18,3 +18,15 @@ export const printHelp = () => {
 
   `);
 };
+
+export const printWeather = (resp, icon) => {
+  // console.log(icon);
+  console.log(`
+  ${chalk.bgYellowBright('Weather')} 
+  Weather in the city: ${resp.name}
+  ${icon}  ${resp.weather[0].description}
+  Temperature: ${resp.main.temp} (feels like as: ${resp.main.feels_like})
+  Humidity: ${resp.main.humidity}%
+  Wind speed: ${resp.wind.speed} m/s
+  `);
+};
